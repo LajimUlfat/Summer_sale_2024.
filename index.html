@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600;700;800&family=Poppins:ital,wght@0,300;0,600;0,700;1,100;1,400&family=Work+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+
+    <title>Summer Sale </title>
+</head>
+
+<body class="bg-[#F8F8F8]">
+    <nav>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+              <a class="btn btn-ghost text-xl">AmazonBD</a>
+            </div>
+            <div class="flex-none">
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                  <div class="indicator">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <span class="badge badge-sm indicator-item">0</span>
+                  </div>
+                </div>
+                <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+                  <div class="card-body">
+                    <span class="font-bold text-lg">0 Items</span>
+                    <span class="text-info">Subtotal: $999</span>
+                    <div class="card-actions">
+                      <button class="btn btn-primary btn-block">View cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                  <div class="w-10 rounded-full">
+                    <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                  </div>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li>
+                    <a class="justify-between">
+                      Profile
+                      <span class="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a>Settings</a></li>
+                  <li><a>Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </nav>
+    <header id="header" class="flex flex-row , bg-[#F9F6E2] , justify-center">
+        <div id="headline" class="text-center my-auto py-12">
+            <h3 class="3xl font-medium pb-11	">---SALE FEVER---</h3>
+            <h1 class="font-bold text-6xl">Purchase TK 200 or <br> above & get <span class="text-fuchsia-500	">20%
+                    off</span></h1>
+            <p class="3xl font-medium pt-20	">Use Promo Code <span
+                    class="	font-semibold  rounded bg-pink-400 text-white  p-4">SELL200</span></p>
+        </div>
+        <div class="banner-picture"><img src="images/Summer 1.png" alt=""></div>
+    </header>
+    <main class=" m-40 flex flex-row ">
+        <div class="items-area  ml-16">
+            <!----------------------------------------- kitchen item --------------------------------------->
+            <div class="kitchen-ware ">
+                <div class="font-semibold text-4xl pb-8 mt-12">kitchenware</div>
+                <div class="kitchen flex flex-row gap-5 ">
+
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="kitchenitemOneTitle" class="card-title">K. Accessories 1</h2>
+                                <p><span id="kitchen-item-1-price" class="product-price ">39.00</span> TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star  "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="kitchenItemTwoText">K. Accessories 2</h2>
+                                <p> 25.00 TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="homeCookerText">Home Cooker</h2>
+                                <p>100 TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------- sports-items-------------------- -->
+            <div class="sports-ware ">
+                <div class="font-semibold text-4xl pb-8 mt-12">Sportsware</div>
+                <div class="kitchen flex flex-row gap-5 ">
+
+                    <div class="sports-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star  "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="capTitleText">Sports Back Cap</h2>
+                                <p><span id="cap-item" class="product-price">49.00</span> TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sports-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="jerseyTittleText">Full Jersey Set</h2>
+                                <p><span id="full-jersey" class="product-price">69.00</span> TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sports-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="catesTitletext">Sports cates</h2>
+                                <p><span id="sports-cates" class="product-price">159.00</span> TK</p>
+
+                                <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------furniture------------------------ -->
+            <div class="furniture">
+                <div class="font-semibold text-4xl pb-8 mt-12">Furniture</div>
+                <div class=" flex flex-row gap-5 ">
+
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod7.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="chairTitleText">Single Relax Chair</h2>
+                                <p><span id="relax-chair" class="product-price">185.00</span> TK</p>
+                                
+                                    <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod8.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="childToyTitleText">Children play</h2>
+                                <p> <span id="children-play" class="product-price">299.00</span></p>
+                                
+                                    <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kitchen-items">
+                        <div class="card w-96 bg-base-100 shadow-xl">
+                            <figure class="px-10 pt-10">
+                                <img src="images/prod9.png" alt="Shoes" class="rounded-xl" />
+                            </figure>
+                            <div class="stars inline-flex ml-40 mt-8">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+
+                            <div class="card-body items-center text-center">
+                                <h2 id="sofaTitleText">Flexible Sofa</h2>
+                                <p><span id="flexible-sofa" class="product-price" class="product-price">339.00</span> TK
+                                </p>
+                               
+                                    <button onclick="getItemValue(this)" class="btn btn-primary">Buy Now</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+jal  j
+
+
+
+        </div>
+
+        <div class="purchase-feild ml-7 bg-white h-36 p-4 ">
+
+            <div class="cuppon-feild">
+                <p>Have cuppon ?</p>
+                <div class="pt-2 gap-1">
+                    <input  id="cupponText" type="text" placeholder="Cuppon Code" class="input input-bordered input-secondary w-13 " />
+                    <button onclick="cupponClick()" id="apply-btn" class="	font-semibold  rounded bg-pink-400 text-white  p-2">Apply</button>
+                </div>
+                <div class="purchase-area mt-20 h-96 bg-white p-4 relative ">
+                    <div id="purchase-item" class="mb-12">Items:</div>
+                    <hr>
+                    <div id="purchase-area-calculation" class="mt-7  absolute bottom-0 p-2 ">
+                        <p>Price : <span id="ItemPriceValue">00 </span>tk</p>
+                        <p>Discount : <span id="discountPrice">00 </span>tk</p>
+                        <p>Total Price : <span id="newtotalprice">00 </span>tk</p>
+                        <button id="purchaseItem"  class="	font-semibold  rounded bg-pink-400 text-white  p-2 ml-16 mt-4">Purchase</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+       
+    </footer>
+
+
+    <!-- java file  -->
+    <script src="summersale2.js"></script>
+
+    <footer>
+        <footer class="footer p-10 bg-neutral text-neutral-content">
+            <nav>
+                <h6 class="footer-title">Services</h6>
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Design</a>
+                <a class="link link-hover">Marketing</a>
+                <a class="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Company</h6>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Contact</a>
+                <a class="link link-hover">Jobs</a>
+                <a class="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 class="footer-title">Legal</h6>
+                <a class="link link-hover">Terms of use</a>
+                <a class="link link-hover">Privacy policy</a>
+                <a class="link link-hover">Cookie policy</a>
+            </nav>
+        </footer>
+    </footer>
+</body>
+
+</html>
